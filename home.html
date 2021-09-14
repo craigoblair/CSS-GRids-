@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Grid Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+    }
+    .container {
+      width: 100vw;
+      height: 100vh;
+
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 12px;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr 1fr; 
+      /*grid-template-columns: repeat(3,1fr);*/
+      grid-template-rows: 25px 25px 1fr 1fr 100px; 
+      /*grid-template: 50px 1fr 1fr 100px / 1fr 1fr 1fr;*/
+
+      gap: 10px;
+
+      padding: 10px;
+      box-sizing: border-box;       
+    }
+    .container div{
+        padding: 10px;
+        border: 1px solid #5e5d5d;
+    }
+    .header{
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+    .header2{
+      grid-column-start: 1;
+      grid-column-end: 4;
+      text-align: center;
+      vertical-align: middle;      
+      word-spacing: 100px;
+    }
+    .footer{
+      grid-column-start: 1;
+      grid-column-end: 4;
+      /*grid-column: 1 / span 3; */
+    }
+    .content-large{
+      grid-row-start: 2;
+      grid-row-end: 4;
+      /*grid-row-end: span 2;*/
+    }
+    .content-small{
+      background-color: rgb(179, 174, 174);
+    }
+    .content-larger{
+      grid-row-start: 3;
+      grid-row-end: 5;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      background-color: rgb(179, 174, 174);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Logo</div>
+    <div class="header2">Home Rescues Testimonials AboutUs</div>
+    <div class="content-larger"></div>
+    <div class="content-small"></div>
+    <div class="content-small"></div>
+    <!--<div class="content-large">Content #1a</div> -->
+    <!--<div class="content-large">Content #1b</div> -->
+    <div class="footer">Logo</div>
+  </div>
+</body>
+</html>
