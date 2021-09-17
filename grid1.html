@@ -12,29 +12,35 @@
       width: 100vw;
       height: 100vh;
 
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      font-weight: bold;
-      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 12px;
 
       display: grid;
 
       grid-template-columns: 1fr 1fr 1fr; 
       /*grid-template-columns: repeat(3,1fr);*/
-      grid-template-rows: 50px 1fr 1fr 100px; 
+      grid-template-rows: 25px 25px 1fr 1fr 100px; 
       /*grid-template: 50px 1fr 1fr 100px / 1fr 1fr 1fr;*/
 
       gap: 10px;
 
       padding: 10px;
-      box-sizing: border-box;
+      box-sizing: border-box;       
     }
     .container div{
         padding: 10px;
-        border: 1px solid #000000;
+        border: 1px solid #5e5d5d;
     }
     .header{
       grid-column-start: 1;
       grid-column-end: 4;
+    }
+    .header2{
+      grid-column-start: 1;
+      grid-column-end: 4;
+      text-align: center;
+      vertical-align: middle;      
+      word-spacing: 100px;
     }
     .footer{
       grid-column-start: 1;
@@ -46,24 +52,28 @@
       grid-row-end: 4;
       /*grid-row-end: span 2;*/
     }
+    .content-small{
+      background-color: rgb(179, 174, 174);
+    }
     .content-larger{
-      grid-row-start: 2;
-      grid-row-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 5;
       grid-column-start: 1;
       grid-column-end: 3;
+      background-color: rgb(179, 174, 174);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">Header</div>
-    <div class="content-larger">Content #1</div>
-    <div class="content-small">Content #2</div>
-    <div class="content-small">Content #3</div>
+    <div class="header">Logo</div>
+    <div class="header2">Home Rescues Testimonials AboutUs</div>
+    <div class="content-larger"></div>
+    <div class="content-small"></div>
+    <div class="content-small"></div>
     <!--<div class="content-large">Content #1a</div> -->
     <!--<div class="content-large">Content #1b</div> -->
-    <div class="footer">Footer</div>
-
+    <div class="footer">Logo</div>
   </div>
 </body>
 </html>
